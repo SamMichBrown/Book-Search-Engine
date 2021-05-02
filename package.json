@@ -1,5 +1,5 @@
 {
-  "name": "googlebooks-app",
+  "name": "Book-Search-Engine",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -8,26 +8,26 @@
     "start:prod": "cd server && npm start",
     "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
     "heroku-postbuild": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git@work.github.com:arosenkranz/googlebooks-app.git"
+    "url": "git+https://github.com/SamMichBrown/Book-Search-Engine.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sam",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamMichBrown/Book-Search-Engine/issues"
+  },
+  "homepage": "https://github.com/SamMichBrown/Book-Search-Engine#readme",
   "dependencies": {
-    "apollo-server-express": "^2.24.0",
-    "bcrypt": "^5.0.1",
-    "express": "^4.17.1",
-    "faker": "^5.5.3",
-    "graphql": "^15.5.0",
     "if-env": "^1.0.4",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.7"
+    "jwt-decode": "^3.1.2",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0"
+    "concurrently": "^6.0.2"
   }
 }

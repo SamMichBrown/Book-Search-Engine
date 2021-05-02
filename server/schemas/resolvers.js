@@ -44,13 +44,13 @@ const resolvers = {
         const updatedUser = await User.findByIdAndUpdate(
           { _id: context.user._id },
           { $push: { savedBooks: bookData } },
-          { new: true, runValidators: true }
+          { new: true }
         );
-
+          
         return updatedUser;
       }
 
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError('You need to be logged in');
     },
 
     removeBook: async (parent, { bookId }, context) => {
@@ -64,10 +64,10 @@ const resolvers = {
         return updatedUser;
       }
 
-      throw new AuthenticationError('You need to be logged in!');
+      throw new AuthenticationError('You need to be logged in');
     },
   },
 };
 
 
-  module.exports = resolvers; 
+  module.exports = resolvers;
