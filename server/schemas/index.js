@@ -1,5 +1,5 @@
 
-// IMPORT GQL //
+// IMPORT GQL ///
 
 const { gql } = require("apollo-server-express");
 
